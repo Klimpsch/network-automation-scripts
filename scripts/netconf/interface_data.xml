@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply message-id="101"
+           xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <data>
+        <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+            <interface>
+
+                <GigabitEthernet>
+                    <name>1</name>
+                    <description>Primary_Uplink</description>
+                    <ip>
+                        <address>
+                            <primary>
+                                <address>192.168.1.10</address>
+                                <mask>255.255.255.0</mask>
+                            </primary>
+                        </address>
+                    </ip>
+                </GigabitEthernet>
+
+                <GigabitEthernet>
+                    <name>2</name>
+                    <description>Backup_Link</description>
+                    <ip>
+                        <address>
+                            <primary>
+                                <address>10.0.0.1</address>
+                                <mask>255.255.255.0</mask>
+                            </primary>
+                        </address>
+                    </ip>
+                </GigabitEthernet>
+
+
+
+            </interface>
+        </native>
+    </data>
+</rpc-reply>
