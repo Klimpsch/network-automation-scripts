@@ -2,6 +2,9 @@ from ncclient import manager
 import sys
 import xmltodict
 import json
+from datetime import datetime 
+
+
 
 # router object
 router = {
@@ -29,6 +32,13 @@ conf_xml = get_router_config()
 #c convert xml to json
 conf_json = json.dumps(conf_xml, indent=4)
 
-# prints the contents
-print(conf_json)
+
+today = datetime.now().strftime("%Y-%m-%d")
+filename = (f"{filename}-Conf.json")
+with open(filename, "w") as f:
+    f.write(conf_json)
+
+print(f"File {filename} has been created")
+
+
 
