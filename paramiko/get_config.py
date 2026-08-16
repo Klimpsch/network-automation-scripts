@@ -11,11 +11,8 @@ def get_cisco_config(hostname, username, password):
     try:
 
         print(f"Connecting to {hostname}...")
-
         client.connect(hostname, username=username, password=password, look_for_keys=False)
-
         connection = client.invoke_shell()
-
         time.sleep(1)
 
         connection.send("term len 0\n")
@@ -25,9 +22,7 @@ def get_cisco_config(hostname, username, password):
         time.sleep(5)
 
         output = connection.recv(65535).decode('utf-8')
-
         print("config retriieved success")
-
         return output
 
     except Exception as e:
@@ -46,6 +41,3 @@ if __name__ == "__main__":
 
     with open(f"{device_ip}_config.text", "w") as f:
         f.write(config_data)
-
-
-
