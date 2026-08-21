@@ -10,8 +10,8 @@ Common flags used throughout:
 Set these once so the commands below stay short:
 
 ```bash
-export DEV=192.168.122.110
-export AUTH=admin:Cisco123
+export DEV=
+export AUTH=
 export ACC='Accept: application/yang-data+json'
 ```
 

@@ -2,16 +2,16 @@ from ncclient import manager
 import sys
 import xmltodict
 import json
-from datetime import datetime 
+from datetime import datetime
 
 
 
 # router object
 router = {
-    "host": "172.16.40.1",
+    "host": "",
     "port": 830,
-    "username": "admin",
-    "password": "Cisco123",
+    "username": "",
+    "password": "",
     "hostkey_verify": False}
 
 def get_router_config():
@@ -39,6 +39,3 @@ with open(filename, "w") as f:
     f.write(conf_json)
 
 print(f"File {filename} has been created")
-
-
-

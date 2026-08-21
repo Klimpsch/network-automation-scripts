@@ -3,8 +3,8 @@
 from ncclient import manager
 
 ROUTER = "172.16.40.1"
-USER   = "admin"
-PASS   = "Cisco123!"
+USER   = ""
+PASS   = "!"
 SOURCE_URL = "flash:///working-config"   # NETCONF wants a URL form
 
 COPY_RPC = f"""

@@ -3,8 +3,8 @@ from ncclient import manager
 device = {
     "host": "172.16.40.1",
     "port": 830,
-    "username": "admin",
-    "password": "Cisco123",
+    "username": "",
+    "password": "",
     "hostkey_verify": False,
     "device_params": {'name': 'csr'}
 }

@@ -1,12 +1,13 @@
 import requests, urllib3
 urllib3.disable_warnings()  # silence self-signed cert warnings (lab only)
 
-BASE = "https://192.168.0.172:443/restconf/data"
+url = ""
+BASE = f"https://{url}:443/restconf/data"
 HDRS = {
     "Accept": "application/yang-data+json",
     "Content-Type": "application/yang-data+json",
 }
-AUTH = ("admin", "Cisco123")
+AUTH = ("", "")
 
 # READ
 r = requests.get(
@@ -16,7 +17,7 @@ r = requests.get(
 print(r.status_code, r.json())
 
 # PATCH — change ONLY the description, everything else preserved
-payload = {"ietf-interfaces:interface": 
+payload = {"ietf-interfaces:interface":
            {"name": "GigabitEthernet2", "description": "uplink-to-core"}
            }
 

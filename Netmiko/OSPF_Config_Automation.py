@@ -6,10 +6,10 @@ ospf_network = ipaddress.IPv4Network('10.0.0.0/24')
 
 
 ospf_routers = {
-    'R1': '192.168.122.117',
-    'R2': '192.168.122.213',
-    'R3': '192.168.122.168',
-    'R4': '192.168.122.25',
+    'R1': '',
+    'R2': '',
+    'R3': '',
+    'R4': '',
 }
 
 network = ipaddress.IPv4Network('10.0.0.0/24')
@@ -56,7 +56,7 @@ for link in link_data:
         with ConnectHandler(
             device_type='cisco_ios',
             host=ospf_routers[router],
-            username='admin',
-            password='secret',
+            username='',
+            password='',
         ) as conn:
             conn.send_config_set(commands)

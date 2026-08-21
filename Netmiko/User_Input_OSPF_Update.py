@@ -4,9 +4,9 @@ import ipaddress
 # Device credentials
 device = {
     'device_type': 'cisco_ios',
-    'host': '192.168.1.1',
-    'username': 'admin',
-    'password': 'password123',
+    'host': '',
+    'username': '',
+    'password': '',
     'secret': 'enable_secret',
 }
 
@@ -94,4 +94,3 @@ if __name__ == '__main__':
     ospf_params = get_ospf_inputs()
     if ospf_params:
         add_ospf_network(device, ospf_params)
-

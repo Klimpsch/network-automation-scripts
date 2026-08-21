@@ -33,9 +33,9 @@ def get_cisco_config(hostname, username, password):
 
 
 if __name__ == "__main__":
-    device_ip = "172.16.40.1"
-    user = "admin"
-    secret = "Cisco123"
+    device_ip = ""
+    user = ""
+    secret = ""
 
     config_data = get_cisco_config(device_ip, user, secret)
 

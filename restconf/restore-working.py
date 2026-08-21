@@ -4,9 +4,9 @@ import requests, urllib3, sys
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-ROUTER = "172.16.40.1"
-USER   = "admin"
-PASS   = "Cisco123!"
+ROUTER = ""
+USER   = ""
+PASS   = ""
 SOURCE = "flash:/working-config"
 
 url = f"https://{ROUTER}/restconf/operations/cisco-ia:copy"

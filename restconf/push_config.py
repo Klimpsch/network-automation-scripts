@@ -8,10 +8,10 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # --- Connection parameters ---
-HOST = "R1"                # replace with the device IP/hostname
+HOST = ""                # replace with the device IP/hostname
 PORT = 443
-USERNAME = "admin"
-PASSWORD = "admin"
+USERNAME = ""
+PASSWORD = ""
 VERIFY_TLS = False         # set True with a valid cert in production
 
 INTERFACE = "GigabitEthernet2"
