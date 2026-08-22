@@ -1,0 +1,15 @@
+testbed:
+  name: my_lab
+
+devices:
+  RTR02:
+    os: iosxe                    # tells Genie WHICH parsers to use
+    type: router
+    credentials:
+      default:
+        username: admin
+        password: "%ASK{}"
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.122.128
